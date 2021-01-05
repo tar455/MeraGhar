@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+*{
+    margin: 0%;
+    padding:0%;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-color:#f03847;
+    --bg-color:#0e0b0c;
+}
+
+
+html{
+    font-size: 110%;
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-link{
+    color: var(--main-color);
+}
+
+/* .nav-link :hover{
+    color: var(--bg-color);
+} */
+.navbar-brand{
+    color: var(--main-color);
+    font-size: 2rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/* nav for Login Page */
+.navbar-brand1{
+    color: var(--main-color);
+    font-size: 2rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+    align-self : center ;
+    font-size: 4rem;
+}
+.main_menu{
+    background-color: var(--bg-color);
+}
+.dom{
+    font-size: 0.8rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* main Header */
+
+
+.btn{
+    color: var(--bg-color);
+    background:var(--main-color);
+} 
+.btn :hover{
+    color: var(--main-color);
+}
+.navbar-toggler{
+    background-color: var(--main-color);
+}
+
+.container-fluid{
+    margin: 0%;
+    padding: 0.1rem 1rem;
+}
+/* .form-control{
+    
+} */
+
+/* Login Page */
+
+.LoginData{
+    padding: 4rem 24rem 10rem 21rem;
+}
+
+
+.LoginData input{
+    width: auto;
+    border-radius: 2rem;
+    margin: 0.4rem 4rem;   
+    
+
+}
+.LoginData input::placeholder
+{
+    color: rgb(129, 19, 19);
+}
+.LoginData #logbtn{
+    border-radius: 1rem;
+}
+
+footer{
+    padding: 1rem;
+    margin-top: auto;
+    background-color: #000;
+    color: #fff;
+}
+footer p{
+    
+    text-align: center;
+    color: #fff;
+    font-size: 0.8rem;
+    line-height: 100%;
+     
+}
+footer span{
+    padding: 1rem 0;
+}
+/* .navbar-toggler-icon{
+    color: var(--main-color);
+} */
+/* h1{
+    color: blue;
+} */
