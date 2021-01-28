@@ -2,7 +2,7 @@ const express=require('express');
 const hbs=require('hbs');
 const path=require('path');
 const app=express();
-
+require('../models/connection')
 // const stapath=path.join(__dirname,'../templates');
 
 app.use('/css',express.static(path.join(__dirname,'../public/css')));

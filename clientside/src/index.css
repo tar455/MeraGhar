@@ -13,10 +13,11 @@
 
 
 html{
+    height: 100vh;
     font-size: 110%;
 }
 body{
-    height: 100vh;
+    
     display: flex;
     flex-direction: column;
 }
@@ -95,11 +96,15 @@ body{
     border-radius: 1rem;
 }
 
-footer{
+.footer{
     padding: 1rem;
-    margin-top: auto;
+    width: 100%;
     background-color: #000;
-    color: #fff;
+    color: #fff;    
+    height:80px;
+    position:absolute;
+    bottom:0;
+    left:0;
 }
 footer p{
     
@@ -118,3 +123,15 @@ footer span{
 /* h1{
     color: blue;
 } */
+@media(max-width: 768px){
+    .main_header_left{
+ 
+     height: auto;
+     margin: 5rem 0;
+    }
+    .main_header_right{
+     height: auto;
+     margin-top: 3rem;
+    }
+ }
+ 
