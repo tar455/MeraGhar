@@ -1,7 +1,8 @@
 import React from "react";
-
+// import SideBar from "./sideBar";
 
 class Header extends React.Component {
+        
         render(){
         return (
             <div className="container-fluid main_menu">
@@ -16,7 +17,7 @@ class Header extends React.Component {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="/index">Home</a>
+          <a className="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li className="nav-item">
           <a className="nav-link" href="/product">Product</a>
@@ -41,6 +42,7 @@ class Header extends React.Component {
             </div>
         </div>
         </nav>
+        {/* <SideBar/> */}
     </div>
   </div>
 </div> 
