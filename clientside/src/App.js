@@ -7,6 +7,7 @@ import Cart from "./pages/cart";
 import HomeScreen from "./pages/HomeScreen";
 import Login from "./pages/Login";
 import Product from "./pages/Product";
+import About from "./pages/about";
 class App extends React.Component {
     render(){
         
@@ -18,6 +19,7 @@ class App extends React.Component {
             <Route path="/login-signup" component={Login}></Route>
             <Route path="/product" component={Product}></Route>
             <Route path="/cart" component={Cart}></Route>
+            <Route path="/about" component={About}></Route>
             </main>
             </div>
             </BrowserRouter>
