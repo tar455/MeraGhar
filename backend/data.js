@@ -24,6 +24,12 @@ Products:[
         price:11,
         image:"./images/OverBrand.jpg"
     },
+    {
+        _id:'5',
+        name:"A2",
+        price:12,
+        image:"/images/A2.jpg"
+    },
 ]
 };
 
