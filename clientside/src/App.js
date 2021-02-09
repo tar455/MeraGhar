@@ -8,6 +8,7 @@ import HomeScreen from "./pages/HomeScreen";
 import Login from "./pages/Login";
 import Product from "./pages/Product";
 import About from "./pages/about";
+import Billing from "./pages/Billing";
 class App extends React.Component {
     render(){
         const number=[1,2,3,4,5,6]
@@ -17,9 +18,10 @@ class App extends React.Component {
             <main>
             <Route key={number.toString} path="/" component={HomeScreen} exact></Route>
             <Route key="login" path="/login-signup" component={Login}></Route>
-            <Route key="products" path="/products" component={Product}></Route>
+            <Route path="/product" component={Product}></Route>
             <Route key="cart" path="/cart" component={Cart}></Route>
             <Route key="about" path="/about" component={About}></Route>
+            <Route path="/billing" component={Billing}></Route>
             </main>
             </div>
             </BrowserRouter>

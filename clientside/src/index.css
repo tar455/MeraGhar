@@ -127,6 +127,12 @@ footer span{
 /* h1{
     color: blue;
 } */
+.alert{
+    padding: 1rem ;
+    border: 0.1rem solid transparent;
+    border: 0.5rem;
+}
+
 @media(max-width: 768px){
     .main_header_left{
  
