@@ -18,8 +18,10 @@ html{
 }
 body{
     
+    margin: 0;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 .nav-link{
@@ -78,38 +80,17 @@ body{
     margin-top: 5rem;
     line-height: 2.5rem;
 }
-
-/* .LoginData{
-    padding: 4rem 24rem 10rem 21rem;
+.main{
+    flex: 1;
 }
-
-
-.LoginData input{
-    width: auto;
-    border-radius: 0.5rem;
-    margin: 0.4rem 4rem;   
-    outline: none;
-    
-
-}
-.LoginData input::placeholder
-{
-    color: rgb(129, 19, 19);
-}
-.LoginData #logbtn{
-    border-radius: 1rem;
-} */
-
-.footer{
+footer{
     padding: 1rem;
-    width: 100%;
     background-color: #000;
-    color: #fff;    
-    height:60px;
-    position:absolute;
-    bottom:auto;
-    left:0;
+    color: #fff;   
+    width:100%; 
+    bottom: 0;
 }
+
 footer p{
     
     text-align: center;
@@ -121,12 +102,6 @@ footer p{
 footer span{
     padding: 1rem 0;
 }
-/* .navbar-toggler-icon{
-    color: var(--main-color);
-} */
-/* h1{
-    color: blue;
-} */
 .alert{
     padding: 1rem ;
     border: 0.1rem solid transparent;

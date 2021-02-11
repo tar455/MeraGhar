@@ -9,12 +9,13 @@ import Login from "./pages/Login";
 import Product from "./pages/Product";
 import About from "./pages/about";
 import Billing from "./pages/Billing";
+import Signup from "./pages/signup";
 class App extends React.Component {
     render(){
         const number=[1,2,3,4,5,6]
         return( 
             <BrowserRouter>
-            <div>
+            <div className="main">
             <main>
             <Route key={number.toString} path="/" component={HomeScreen} exact></Route>
             <Route key="login" path="/login-signup" component={Login}></Route>
@@ -22,6 +23,7 @@ class App extends React.Component {
             <Route key="cart" path="/cart" component={Cart}></Route>
             <Route key="about" path="/about" component={About}></Route>
             <Route path="/billing" component={Billing}></Route>
+            <Route path="/signup" component={Signup}></Route>
             </main>
             </div>
             </BrowserRouter>

@@ -1,7 +1,5 @@
 
 // import React from "react";
-
-
 export function Increment(count)
 {
     if(count>=10000)
