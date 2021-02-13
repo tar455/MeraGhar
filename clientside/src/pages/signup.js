@@ -41,6 +41,7 @@ export default function signup() {
                             <div className="form-group">
                                 <input type="submit" id="signupButton" className="btn me-2"/>
                             </div>
+                            If Already Have An Account <a href="/login-signup">Login</a>  
                         </form>
                     </div>
                 </div>

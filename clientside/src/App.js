@@ -1,7 +1,5 @@
 // import { render } from "react-dom";
 import React from "react";
-// import Header from "./template/header";
-// import  Footer from "./template/footer";
 import {BrowserRouter,Route} from 'react-router-dom';
 import Cart from "./pages/cart";
 import HomeScreen from "./pages/HomeScreen";
