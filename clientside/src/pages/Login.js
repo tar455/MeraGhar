@@ -3,18 +3,8 @@ import Header2 from "../template/header2";
 import Footer from "../template/footer";
 
 
-
 export default function Login(){
-    // const pass=document.getElementById('exampleInputPassword1');
-    // checkbox1 = () =>{
-    //     if(pass.type==="password")
-    //     {
-    //         pass.type="text";
-    //     }
-    //     else{
-    //         pass.type="password";
-    //     }
-    // }
+    
     return(
         <div>
         <div>

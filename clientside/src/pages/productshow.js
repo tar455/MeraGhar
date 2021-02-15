@@ -6,7 +6,7 @@ export default function ProductShow() {
       <>
     { 
     data.Products.map((data)=>(
-    <div className="card">
+    <div key={data._id} className="card">
                         <h3 className="card-header">Best Sellers</h3>
                         <div className="card-body">
                             <div className="container">
