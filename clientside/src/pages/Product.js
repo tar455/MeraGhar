@@ -7,7 +7,7 @@ import ProductShow from "./productshow";
 export default function Product(){
     const dispatch=useDispatch();
     const productList = useSelector((state) => state.productList);
-    const {loading,error,data} = productList;
+    const {loading,error,products} = productList;
     useEffect(() =>{
         dispatch(listProduct());
     },[dispatch]);
@@ -17,8 +17,11 @@ export default function Product(){
                 loading? <LoadingBox></LoadingBox>
                 :
                 error?<MessageBox>{error}</MessageBox>
-                :(
-                    <ProductShow key={data.__id} ></ProductShow>
+                :(<>
+                {products.data.map((product)=>(
+                    <ProductShow key={product.__id} product={product} ></ProductShow>
+                ))}
+                </>
             )}
         </div>
     );

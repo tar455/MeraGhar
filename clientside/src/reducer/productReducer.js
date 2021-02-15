@@ -10,7 +10,7 @@ export const ProductListReducer=(
         case PRODUCT_LIST_REQUEST:
             return{loading:true};
         case PRODUCT_LIST_SUCCESS:
-            return{loading:false,data:action.payload};
+            return{loading:false,products:action.payload};
         case PRODUCT_LIST_FAILURE:
             return{loading:false,error:action.payload};
         default:

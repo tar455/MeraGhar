@@ -4,15 +4,15 @@ export default function ProductShow() {
     const [count,Increment]=useState(1000);
   return (
       <>
-    { 
-    data.Products.map((data)=>(
-    <div key={data._id} className="card">
+    {
+        data.Products.map((data)=>(
+        <div className="card">
                         <h3 className="card-header">Best Sellers</h3>
                         <div className="card-body">
                             <div className="container">
                                 <div className="row">
                                     <div className="col-sm-auto">
-                                        <div key={data._id} className="card">
+                                        <div className="card">
                                             <h3 className="card-header">{data.name}</h3>
                                                 <div className="card-body">
                                                     <img src={data.image} style={{width:"290px", height:"300px"}} alt="bricks"/>

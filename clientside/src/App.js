@@ -15,7 +15,7 @@ class App extends React.Component {
             <BrowserRouter>
             <div className="main">
             <main>
-            <Route key={number.toString} path="/" component={HomeScreen} exact></Route>
+            <Route key={number.toString} path="/subkaghar.herokuapp.com/" component={HomeScreen} exact></Route>
             <Route key="login" path="/login-signup" component={Login}></Route>
             <Route path="/product" component={Product}></Route>
             <Route key="cart" path="/cart" component={Cart}></Route>
