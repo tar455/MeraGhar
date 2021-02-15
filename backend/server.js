@@ -4,6 +4,8 @@ import data from './data.js';
 import '../cofigFile/cofigDB.js';
 const app=express();
 
+const PORT=process.env.PORT || 5000;
+
 app.get('/api/products',(req,res)=>{
     res.send(data.Products);
 });
@@ -11,6 +13,10 @@ app.get('/api/products',(req,res)=>{
 app.get('/',(req,res)=>{
     res.send("server is ready");
 });
-app.listen(5000,(req,res)=>{
-    console.log("Server running at localhost:5000");
+if(process.env.NODE_ENV === 'production')
+{
+    app.use(express.static('clientside/build'));
+}
+app.listen(PORT,(req,res)=>{
+    console.log(`Server running at localhost:${PORT}`);
 });

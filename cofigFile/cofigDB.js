@@ -3,7 +3,7 @@ import mongodb  from 'mongodb';
 const url="mongodb://localhost:27017/GreenWeather";
 
 
-mongodb.connect(url,{useNewUrlParser:true,useUnifiedTopology:true},(err)=>
+mongodb.connect(process.env.MONGODB_URI ||url,{useNewUrlParser:true,useUnifiedTopology:true},(err)=>
 {
     if(!err)
     {

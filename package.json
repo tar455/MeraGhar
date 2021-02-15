@@ -5,7 +5,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd clientside && npm run build",
+    "install-clientside": "cd clientside && npm install",
+    "heroku-postbuild":  "npm run install-clientside && npm run build",
+    "start": "node backend/server.js",
+    "clientside": "cd clientside npm start"
   },
   "author": "Tarique",
   "license": "ISC",
