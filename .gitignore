@@ -4,4 +4,4 @@ node_modules
 
 #vs code ignore
 
-./.vscode
+.vscode

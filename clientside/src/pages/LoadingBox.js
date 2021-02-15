@@ -3,7 +3,7 @@ import React from 'react'
 export default function LoadingBox() {
     return (
         <div>
-            loading
+            <i className="fas fa-spinner"></i>
         </div>
     )
 }

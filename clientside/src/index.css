@@ -21,6 +21,7 @@ body{
     margin: 0;
     display: flex;
     flex-direction: column;
+    height: 100%;
     min-height: 100vh;
 }
 
@@ -74,7 +75,13 @@ body{
 /* .form-control{
     
 } */
-
+/* Loading  */
+.fa-spinner
+{
+    display: block;
+    margin-left: auto;
+    size: 5rem;
+}
 /* Login Page */
 .form-login{
     margin-top: 5rem;
@@ -84,11 +91,13 @@ body{
     flex: 1;
 }
 footer{
-    padding: 1rem;
+    padding: auto;
     background-color: #000;
     color: #fff;   
-    width:100%; 
-    bottom: 0;
+    /* clear: both; */
+    position: absolute;
+    width: 100%;
+    bottom: auto;
 }
 
 footer p{
