@@ -6,20 +6,23 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "clientside": "cd clientside && npm start",
     "build": "cd clientside && npm run build",
     "install-clientside": "cd clientside && npm install",
-    "heroku-postbuild":  "npm run install-clientside && npm run build",
-    "start": "node backend/server.js",
-    "clientside": "cd clientside npm start"
+    "heroku-postbuild": "npm run install-clientside && npm run build",
+    "start": "concurrently  \"nodemon backend/server.js\" \"npm run clientside"
   },
   "author": "Tarique",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "bootstrap": "^5.0.0-beta1",
+    "concurrently": "^6.0.0",
     "express": "^4.17.1",
     "hbs": "^4.1.1",
     "mongoose": "^5.11.9",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "sequelize": "^6.5.0"
   },
   "devDependencies": {
     "eslint": "^7.19.0",

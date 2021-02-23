@@ -35,6 +35,8 @@ export default function Login(){
                                 </div>
                                 
                     </form>
+                    Forget<a href="/forgetPassword"> Password</a>
+                    <br/>
                     If don't have any account Please <a href="/signup">signup</a>
                     </div>
                 </div>

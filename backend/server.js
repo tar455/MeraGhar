@@ -1,22 +1,19 @@
-import express from 'express';
-import data from './data.js';
-// const app = express();
-import '../cofigFile/cofigDB.js';
-const app=express();
+// import createRequire from 'module';
+// const require = createRequire(import.meta.url);
+import  express from 'express';
+import data from "./data.js";
+// require('../router/signUproute.js');
 
 const PORT=process.env.PORT || 5000;
+const app= express();
+
 
 app.get('/api/products',(req,res)=>{
     res.send(data.Products);
-});
+})
+// app.use("/auth",router);
+app.listen(PORT,()=>{
+    console.log(`Server running on Port${PORT}`);
+})
 
-app.get('/',(req,res)=>{
-    res.send("server is ready");
-});
-if(process.env.NODE_ENV === 'production')
-{
-    app.use(express.static('clientside/build'));
-}
-app.listen(PORT,(req,res)=>{
-    console.log(`Server running at localhost:${PORT}`);
-});
+export default app;
