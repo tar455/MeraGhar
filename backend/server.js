@@ -11,6 +11,7 @@ const app= express();
 app.get('/api/products',(req,res)=>{
     res.send(data.Products);
 })
+app.use('/', express.static(path.join(__dirname, 'dist')));
 // app.use("/auth",router);
 app.listen(PORT,()=>{
     console.log(`Server running on Port${PORT}`);
