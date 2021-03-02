@@ -15,7 +15,8 @@ export default function ProductShow() {
                                         <div className="card">
                                             <h3 className="card-header">{data.name}</h3>
                                                 <div className="card-body">
-                                                    <img src={data.image} style={{width:"290px", height:"300px"}} alt="bricks"/>
+                                                    <a href="/productView/{data.id}"><img src={data.image} style={{width:"290px", height:"300px"}} alt="bricks"/>
+                                                    </a>
                                                         <p className="price"><i className="fas fa-rupee-sign"></i><strong>{count*data.price}</strong>  <del style={{color:"red"}}><i className="fas fa-rupee-sign"></i> {count*15}</del></p>
                                                             <button className="btn btn-danger" onClick={()=>Increment(count+500)}><i className="fas fa-plus-square"></i></button>
                                                                 {count}

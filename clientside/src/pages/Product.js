@@ -19,7 +19,7 @@ export default function Product(){
                 error?<MessageBox>{error}</MessageBox>
                 :(<>
                 {products.data.map((product)=>(
-                    <ProductShow key={product.__id} product={product} ></ProductShow>
+                   <ProductShow key={product.__id} product={product} ></ProductShow> 
                 ))}
                 </>
             )}

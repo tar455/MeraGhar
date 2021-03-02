@@ -8,6 +8,7 @@ import Product from "./pages/Product";
 import About from "./pages/about";
 import Billing from "./pages/Billing";
 import Signup from "./pages/signup";
+import ProductView from "./pages/ProductView";
 class App extends React.Component {
     render(){
         const number=[1,2,3,4,5,6]
@@ -22,6 +23,7 @@ class App extends React.Component {
             <Route key="about" path="/about" component={About}></Route>
             <Route path="/billing" component={Billing}></Route>
             <Route path="/signup" component={Signup}></Route>
+            <Route path="/productView" component={ProductView}></Route>
             </main>
             </div>
             </BrowserRouter>

@@ -12,9 +12,12 @@ const app= express();
 app.get('/api/products',(req,res)=>{
     res.send(data.Products);
 })
-app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-  });
+app.get(`/ProductView/${data.Products.id}`,(req,res)=>{
+    res.send(data.Products);
+})
+// app.get('*', (req, res) => {
+//     res.sendFile(path.resolve(__dirname, 'clientside', 'build', 'index.html'));
+//   });
 // app.use("/auth",router);
 app.listen(PORT,()=>{
     console.log(`Server running on Port${PORT}`);
