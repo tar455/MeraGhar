@@ -25,6 +25,9 @@ app.get('/about',(req, res)=>{
 })
 app.get('/Login',(req, res)=>{
     res.render('Login');
+});
+app.get('/signup',(req, res)=>{
+    res.render('Signup');
 })
 app.get('/api/products',(req,res)=>{
     res.send(data.Products);
