@@ -1,7 +1,7 @@
-
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 :root{
-    --main-bg: #097a9c;
-    --main-color: #6cdf85;
+    --main-bg: #ebf2f5;
+    --main-color: #071647;
 }
 body{
     margin: 0;
@@ -12,7 +12,10 @@ body{
 h1{
     color: var(--main-bg);
 }
-.container{
+.nav-container{
+    flex:auto;
+}
+.container-fluid{
     flex: 1;
 }
 .navbar{
@@ -25,12 +28,42 @@ h1{
 .navbar-text{
    float: left;
 }
-
-
+.head-text
+{
+    margin-top: 0rem;
+    margin-left: auto;
+    background-color:cornflowerblue;
+    padding-top: 5rem;
+    padding-bottom:3rem ;
+    padding-left: auto;
+    line-height: 2rem;
+    padding-right:auto;
+    text-align: center;
+}
+.nav-link{
+    color:var(--main-bg);
+}
+.head-it{
+   text-align: center;
+}
+.Info
+{
+    background-color: #1c97cf;
+    margin-top: 2.5rem;
+}
+.inside-text{
+    font-family: auto ;
+}
+.arrow
+{
+    margin-top: 4.5rem;
+    /* margin-left: 0rem; */
+}
 /* footer */
 footer span{
     text-align: center;
 }
+
 footer {
     /* background-color: var(--main-bg); */
     height: 50px;

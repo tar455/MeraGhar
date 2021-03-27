@@ -6,6 +6,9 @@ export default function Billing(){
     return(
         <div>
             <HomeScreen/>
+            <div>
+                
+            </div>
         </div>
     );
 }

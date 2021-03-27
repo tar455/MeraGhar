@@ -1,5 +1,5 @@
 import createRequire from 'module';
-import app from '../backend/server.js';
+// import app from '../backend/server.js';
 const require = createRequire(import.meta.url);
 const express=require('express');
 const mongoose=require('mongoose');
@@ -8,12 +8,16 @@ require('../model/Usermodel.js');
 const User = mongoose.model('User');
 
 const router =express.Router();
-app.get('/Login', (req, res) => {
+router.get('/Login', (req, res) => {
 
 })
-app.post('/HomeForDealer',(req,res)=>{
+router.post('/HomeForDealer',(req,res)=>{
     
 })
+router.post('/User/signup')
+{
+
+}
 router.get('/signup', expressAsyncHandler(async(req, res)=>{
     res.render('/signup');
 }))
