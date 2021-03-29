@@ -3,6 +3,7 @@ import React,{useState} from 'react';
 import data from "./data";
 export default function ProductShow() {
     const [count,Increment]=useState(1000);
+    
   return (
       <>
     {
@@ -14,7 +15,7 @@ export default function ProductShow() {
                                 <div className="row">
                                     <div className="col-sm">
                                         <div className="card">
-                                            <h3 className="card-header">{data.name}</h3>
+                                               <h3 className="card-header">{data.name}</h3>
                                                 <div className="card-body">
                                                     <a href="/productView:id"><img src={data.image} style={{width:"290px", height:"300px"}} alt="bricks"/>
                                                     </a>

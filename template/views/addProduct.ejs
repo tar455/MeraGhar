@@ -36,17 +36,39 @@
             </div>
         </div>
     </div>
-    <div class="container-lg">
+    <div class="container AddIt">
         <div class="row">
             <div class="col-sm-4">
                 <form action="" >
                     <div class="form-group">
-                    <input type="text" name="Product Name" class="form-control">
-                    <input type="file" class="form-control"/>
+                        <label for="exampleInputName">
+                            Name <span style="color:red">*</span>
+                        </label>
+                        <input type="text" id="exampleInputName"  name="Product Name" class="form-control" placeholder="Enter Full Name of  the product ">
+                    <!-- show at here later -->
+                         
                     </div>
+                    <div class="form-group">
+                        <label for="exampleInputImg">
+                            Upload an Image <span style="color:red">*</span>
+                        </label>
+                        <input type="file" id ="exampleInputImg" class="form-control" name="UploadImg">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPrice">
+                            Price <span style="color:red">*</span>
+                        </label>
+                        <input type="text" id="exampleInputPrice" name="Price" class="form-control" placeholder="Enter Your Selling  Price ">
+                    </div>
+                    <input type="submit" class="btn btn-primary"name="Submit">
                 </form>
             </div>
         </div>
     </div>
+    <footer>
+        <span class="copyright">
+            Copy Right 2021 <i class="fas fa-copyright"></i>
+        </span>
+    </footer>
 </body>
 </html>
