@@ -7,7 +7,44 @@ class Header extends React.Component {
     super(props);
     this.state = {
       searchTerm: "",
+      locationLabel: "Detecting location...",
     };
+  }
+
+  componentDidMount() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        async (position) => {
+          const { latitude, longitude } = position.coords;
+          try {
+            const response = await fetch(
+              `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`,
+              {
+                headers: { "Accept-Language": "en" },
+              }
+            );
+            const data = await response.json();
+            const address = data.address || {};
+            const city = address.city || address.town || address.village || address.county;
+            const state = address.state || address.region;
+            const label = city && state ? `${city}, ${state}` : "Location unavailable";
+            this.setState({ locationLabel: label });
+          } catch (error) {
+            this.setState({ locationLabel: "Location unavailable" });
+          }
+        },
+        () => {
+          this.setState({ locationLabel: "Location unavailable" });
+        },
+        {
+          enableHighAccuracy: true,
+          timeout: 8000,
+          maximumAge: 60000,
+        }
+      );
+    } else {
+      this.setState({ locationLabel: "Geolocation not supported" });
+    }
   }
 
   handleInputChange = (event) => {
@@ -54,6 +91,7 @@ class Header extends React.Component {
                       <a className="nav-link" href="/">
                         <i className="fas fa-map-marker-alt me-2"></i>
                       </a>
+                      <span className="location-text">{this.state.locationLabel}</span>
                       <input
                         className="form-control me-2"
                         type="search"

@@ -29,6 +29,13 @@ body{
     color: var(--main-color);
 }
 
+.location-text {
+    color: #fff;
+    font-size: 0.95rem;
+    margin-right: 0.8rem;
+    white-space: nowrap;
+}
+
 /* .nav-link :hover{
     color: var(--bg-color);
 } */
