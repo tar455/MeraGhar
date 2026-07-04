@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
+import { useLocation } from "react-router-dom";
 import LoadingBox from "./LoadingBox";
 import MessageBox from "./messageBox";
 import { useSelector, useDispatch } from "react-redux";
@@ -7,10 +8,20 @@ import ProductShow from "./productshow";
 
 export default function Product() {
     const dispatch = useDispatch();
+    const location = useLocation();
     const productList = useSelector((state) => state.productList);
     const { loading, error, products } = productList;
-    const [searchTerm, setSearchTerm] = useState("");
+    const searchQuery = useMemo(() => new URLSearchParams(location.search).get("search") || "", [location.search]);
+    const [searchTerm, setSearchTerm] = useState(searchQuery);
     const [selectedCategory, setSelectedCategory] = useState("All");
+
+    useEffect(() => {
+        dispatch(listProduct());
+    }, [dispatch]);
+
+    useEffect(() => {
+        setSearchTerm(searchQuery);
+    }, [searchQuery]);
 
     useEffect(() => {
         dispatch(listProduct());
