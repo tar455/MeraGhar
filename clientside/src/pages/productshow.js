@@ -1,38 +1,51 @@
-import React,{useState} from 'react';
-// import axios from 'axios';
-import data from "./data";
-export default function ProductShow() {
-    const [count,Increment]=useState(1000);
-    
-  return (
-      <>
-    {
-        data.Products.map((data)=>(
-        <div className="card">
-                        <h3 className="card-header">Best Sellers</h3>
-                        <div className="card-body">
-                            <div className="container">
-                                <div className="row">
-                                    <div className="col-sm">
-                                        <div className="card">
-                                               <h3 className="card-header">{data.name}</h3>
-                                                <div className="card-body">
-                                                    <a href="/productView:id"><img src={data.image} style={{width:"290px", height:"300px"}} alt="bricks"/>
-                                                    </a>
-                                                        <p className="price"><i className="fas fa-rupee-sign"></i><strong>{count*data.price}</strong>  <del style={{color:"red"}}><i className="fas fa-rupee-sign"></i> {count*15}</del></p>
-                                                            <button className="btn btn-danger" onClick={()=>Increment(count+500)}><i className="fas fa-plus-square"></i></button>
-                                                                {count}
-                                                                    <button className="btn btn-danger" onClick={()=>Increment(count-500)}><i className="fas fa-minus-square"></i></button>
-                                                                        <a href="/cart">
-                                                                            <button className="btn btn-danger"><i className="fas fa-shopping-cart"></i></button>
-                                                                        </a>
-                                                </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+import React, { useState } from "react";
+
+export default function ProductShow({ product }) {
+    const [quantity, setQuantity] = useState(1);
+
+    const price = Number(product?.price || 0);
+    const category = product?.category || "General";
+    const name = product?.name || "Premium product";
+    const image = product?.image || "/images/placeholder.jpg";
+
+    const changeQuantity = (delta) => {
+        setQuantity((current) => Math.max(1, current + delta));
+    };
+
+    return (
+        <article className="product-card">
+            <div className="product-badge">{category}</div>
+            <img className="product-image" src={image} alt={name} />
+            <div className="product-body">
+                <p className="product-category">{category}</p>
+                <h3>{name}</h3>
+                <p className="product-copy">
+                    Crafted for reliability, modern finishes, and effortless installation.
+                </p>
+                <div className="product-meta">
+                    <div>
+                        <span className="price-label">Starting at</span>
+                        <div className="product-price">
+                            <i className="fas fa-rupee-sign"></i>
+                            <strong>{price}</strong>
                         </div>
-                    </div>))}
-    </>
-  );
+                    </div>
+                    <div className="quantity-controls">
+                        <button type="button" onClick={() => changeQuantity(-1)}>
+                            -
+                        </button>
+                        <span>{quantity}</span>
+                        <button type="button" onClick={() => changeQuantity(1)}>
+                            +
+                        </button>
+                    </div>
+                </div>
+                <div className="product-actions">
+                    <a href="/cart" className="btn btn-danger">
+                        Add to cart
+                    </a>
+                </div>
+            </div>
+        </article>
+    );
 }
